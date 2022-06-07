@@ -1,0 +1,44 @@
+CREATE TABLE utilisateur (
+	id bigserial primary key,
+	nom varchar(20) ,
+	prenom varchar(20) ,
+	email varchar(20),
+	password varchar(20)
+);
+
+CREATE TABLE produit (
+	ref_produit varchar(20)  primary key,
+	nom_produit varchar(20),
+	type_produit varchar(20),
+	qte int,
+	prix float,
+	ref_categorie varchar(20) references categorie(ref_categorie)
+);
+
+CREATE TABLE categorie (
+	ref_categorie varchar(20) primary key,
+	nom_categorie varchar(20)
+);
+
+drop table produit;
+drop table categorie;
+
+insert into produit values ('A1','samsung galaxie S20','mobile',100,10000,'A');
+insert into produit values ('A2','hp elitbook core i5','oridnateur',50,5000,'A');
+insert into produit values ('A3','souris bluetooth','accesoires',800,50,'A');
+insert into produit values ('B1','tomato','legumes',1000,5,'B');
+insert into produit values ('B2','pizza','fast food',1000,25,'B');
+insert into produit values ('B3','milk','drink',1000,6,'B');
+insert into produit values ('C1','gellete blue 2 plus','haircut',700,5,'C');
+insert into produit values ('C2','gel douche','showers',700,10,'C');
+insert into produit values ('C3','savon dove','showers',700,10,'C');
+
+insert into categorie values ('A','TECHNOLOGIE');
+insert into categorie values ('B','FOOD');
+insert into categorie values ('C','BEAUTY');
+
+
+select * from utilisateur;
+select * from produit;
+select * from categorie;
+select * from categorie  join produit on  produit.ref_categorie = categorie.ref_categorie where produit.ref_categorie='A';
