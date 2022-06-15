@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label prefHeight="66.0" prefWidth="341.0" text="Se Connecter" textFill="#ff0101">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Icon content="ACCOUNT_BALANCE" />
+      <HBox prefHeight="40.0" prefWidth="200.0">
+         <children>
+            <TextField alignment="TOP_CENTER" prefHeight="27.0" prefWidth="171.0">
+               <font>
+                  <Font name="Bradley Hand ITC" size="1.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</VBox>
