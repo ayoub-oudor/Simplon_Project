@@ -33,6 +33,7 @@ public class StudentDao implements InterfaceDao<Student>{
 
 	@Override
 	public void updateUser(Student student) {
+		Transaction transaction = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 			// start a transaction
 			transaction = session.beginTransaction();
@@ -75,13 +76,14 @@ public class StudentDao implements InterfaceDao<Student>{
 	}
 
 	@Override
-	public void getUser(String username, String password) {
+	public boolean getUser(String username, String password) {
+		return false;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getUser(int id) {
+	public boolean getUser(int id) {
 		Transaction transaction = null;
 		Student student = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -97,6 +99,7 @@ public class StudentDao implements InterfaceDao<Student>{
 			}
 			e.printStackTrace();
 		}
+		return false;
 		
 	}
 

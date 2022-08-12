@@ -32,7 +32,7 @@ public class AdminDao implements InterfaceDao<Admin>{
 		session.close();		
 	}
 
-	public void getUser(String username, String password) {
+	public boolean getUser(String username, String password) {
         Transaction transaction = null;
         Admin admin = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -50,6 +50,7 @@ public class AdminDao implements InterfaceDao<Admin>{
             }
             e.printStackTrace();
         }
+		return false;
         
 	}
 //	Admin admin;
@@ -105,7 +106,7 @@ public class AdminDao implements InterfaceDao<Admin>{
 	}
 
 	@Override
-	public void getUser(int id) {
+	public boolean getUser(int id) {
 		
 		Transaction transaction = null;
 		Admin admin = null;
@@ -122,6 +123,7 @@ public class AdminDao implements InterfaceDao<Admin>{
 			}
 			e.printStackTrace();
 		}
+		return false;
 
 	}
 	

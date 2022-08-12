@@ -9,4 +9,35 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ProfServlet</display-name>
+    <servlet-name>ProfServlet</servlet-name>
+    <servlet-class>servlet.ProfServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProfServlet</servlet-name>
+    <url-pattern>/ProfServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>StudentServlet</display-name>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>servlet.StudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/StudentServlet</url-pattern>
+  </servlet-mapping>
+     <servlet>
+    <description></description>
+    <display-name>CousreServlet</display-name>
+    <servlet-name>CousreServlet</servlet-name>
+    <servlet-class>servlet.CousreServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CousreServlet</servlet-name>
+    <url-pattern>/CousreServlet</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

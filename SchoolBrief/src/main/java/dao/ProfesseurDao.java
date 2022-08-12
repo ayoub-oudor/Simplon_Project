@@ -78,13 +78,14 @@ public class ProfesseurDao implements InterfaceDao<Professeur> {
 	}
 
 	@Override
-	public void getUser(String username, String password) {
+	public boolean getUser(String username, String password) {
+		return false;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getUser(int id) {
+	public boolean getUser(int id) {
 			Transaction transaction = null;
 			Professeur prof = null;
 			try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -100,6 +101,7 @@ public class ProfesseurDao implements InterfaceDao<Professeur> {
 				}
 				e.printStackTrace();
 			}
+			return false;
 		
 	}
 

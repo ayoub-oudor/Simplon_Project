@@ -13,7 +13,7 @@ import dao.AdminDao;
 
 public class Admin_Servlet_login extends HttpServlet {
 	AdminDao adminDao = new AdminDao();
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; 
 	
     public Admin_Servlet_login() {
         super();
@@ -22,7 +22,7 @@ public class Admin_Servlet_login extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
+ 
  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		login(request, response);
@@ -33,7 +33,7 @@ public class Admin_Servlet_login extends HttpServlet {
 		String password = request.getParameter("psw");
 		//boolean result = adminDao.getUser(username, password);
 		PrintWriter out = response.getWriter();
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("courseList.jsp");
 		
 //		try {
 //			

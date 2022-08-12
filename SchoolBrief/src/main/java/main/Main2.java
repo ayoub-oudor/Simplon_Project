@@ -1,7 +1,9 @@
 package main;
 
 import dao.CourDao;
+import dao.ProfesseurDao;
 import entity.Cour;
+import entity.Professeur;
  
 public class Main2 {
 
@@ -20,13 +22,15 @@ public class Main2 {
 		   //dao.deleteUser(3);
 		   
 		   //Main Cour//
-		   CourDao dao = new CourDao();
-		   Cour cour = new Cour("data base","11/08/2022");
-		   dao.saveUser(cour);
+//		   CourDao dao = new CourDao();
+//		   Cour cour = new Cour("data base","11/08/2022");
+//		   dao.saveUser(cour);
 		   
 		   //Main Professeur//
-		   
-		   
+		   //ProfesseurDao profDao = new ProfesseurDao();
+		   //Professeur prof = new Professeur();
+		   //profDao.saveUser(prof);
+		   //profDao.deleteUser(1);
 		   //Main Student//
 		   
 	} 

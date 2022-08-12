@@ -75,13 +75,14 @@ public class CourDao implements InterfaceDao<Cour> {
 	}
 
 	@Override
-	public void getUser(String username, String password) {
+	public boolean getUser(String username, String password) {
+		return false;
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getUser(int id) {
+	public boolean getUser(int id) {
 		Transaction transaction = null;
 		Cour course = null;
 		try (Session session = HibernateUtil.getSessionFactory().openSession()) {
@@ -96,7 +97,8 @@ public class CourDao implements InterfaceDao<Cour> {
 				transaction.rollback();
 			}
 			e.printStackTrace();
-		}	
+		}
+		return false;	
 	}
 
 	@Override
